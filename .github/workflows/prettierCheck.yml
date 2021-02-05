@@ -1,0 +1,17 @@
+name: 'Prettier Check'
+on:
+  pull_request:
+    branches: [master]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install npm packages
+        run: npm install
+      - name: Prettier Check
+        run:
+          git diff --name-only origin/master HEAD | xargs
+          ./node_modules/.bin/prettier --check
