@@ -14,4 +14,4 @@ jobs:
       - name: Prettier Check
         run:
           git diff --name-only origin/master HEAD | xargs
-          ./node_modules/.bin/prettier --debug-check --check
+          ./node_modules/.bin/prettier --check
