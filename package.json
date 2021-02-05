@@ -2,8 +2,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"prettier:check": "prettier --debug-check --check"
+		"start": "next start"
 	},
 	"dependencies": {
 		"next": "^10.0.6",
