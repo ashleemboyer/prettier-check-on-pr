@@ -1,5 +1,4 @@
 name: 'Prettier Check'
-description: 'Checks if files changed in a PR are formatted with Prettier.'
 on:
   pull_request:
     branches: [master]
