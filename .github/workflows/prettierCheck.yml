@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: '12.x'
       - name: Prettier Check
+        with:
+          ref: ${{ github.head_ref }}
         run: |
           npm i
           npm run prettier:check
