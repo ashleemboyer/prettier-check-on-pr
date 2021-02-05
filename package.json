@@ -3,7 +3,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"prettier:check": "prettier --check $(git diff --name-only | xargs)",
+		"prettier:check": "prettier --debug-check --check $(git diff --name-only | xargs)",
 		"prettier:write": "prettier --write"
 	},
 	"dependencies": {
