@@ -7,12 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
+      - name: Install npm packages
+        run: npm install
       - name: Prettier Check
-        run: |
-          npm i
-          npm run prettier:check
+        run:
+          git diff --name-only origin/master HEAD | xargs npm run prettier:check
